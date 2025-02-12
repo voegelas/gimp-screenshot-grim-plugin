@@ -1,0 +1,109 @@
+# GIMP plug-in translation
+# Translators:
+# Andreas Vögele <andreas@andreasvoegele.com>, 2025
+msgid ""
+msgstr ""
+"Project-Id-Version: gimp-screenshot-grim-plugin\n"
+"Report-Msgid-Bugs-To: https://github.com/voegelas/gimp-screenshot-grim-plugin/issues\n"
+"POT-Creation-Date: 2025-02-12 13:32+0100\n"
+"PO-Revision-Date: 2025-02-12 20:58+0100\n"
+"Last-Translator: Andreas Vögele <andreas@andreasvoegele.com>\n"
+"Language-Team: https://github.com/voegelas/gimp-screenshot-grim-plugin/\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Missing Wayland output name"
+msgstr "Der Name der Wayland-Ausgabe fehlt"
+
+msgid "Invalid rectangle coordinates"
+msgstr "Unzulässige Rechteckskoordinaten"
+
+msgid "Unknown shoot type"
+msgstr "Unbekannte Art des Bildschirmfotos"
+
+msgid "Cannot load screenshot"
+msgstr "Kann Bildschirmfoto nicht laden"
+
+msgid "Screenshot with grim"
+msgstr "Bildschirmfoto mit grim"
+
+msgid "Create an image from a region of a Wayland desktop"
+msgstr "Fotografiert einen Bereich eines Wayland-Desktops"
+
+msgid ""
+"This plug-in takes a screenshot of a user-selected desktop region. Entire "
+"outputs and fixed rectangles can be captured in non-interactive mode. The "
+"command-line utilities grim and slurp are required."
+msgstr ""
+"Dieses Plugin fotografiert einen von Ihnen ausgewählten Desktop-Bereich. "
+"Ganze Bildschirme und feste Ausschnitte können im nicht interaktiven "
+"Modus aufgenommen werden. Die Kommandozeilenprogramme grim und slurp müssen "
+"installiert sein."
+
+msgid "Run mode"
+msgstr "Laufmodus"
+
+msgid "The run mode"
+msgstr "Der Laufmodus"
+
+msgid "Select a region to capture"
+msgstr "Einen Bereich auswählen"
+
+msgid "Move selection with space bar held or cancel with Esc"
+msgstr "Auswahl bei gedrückter Leertaste verschieben oder mit Esc abbrechen"
+
+msgid "Capture an entire Wayland output"
+msgstr "Eine ganze Wayland-Ausgabe fotografieren"
+
+msgid "Pass the output name in \"output\""
+msgstr "Ausgabename in \"output\" übergeben"
+
+msgid "Capture a region by coordinates"
+msgstr "Bereich mit Koordinaten auswählen"
+
+msgid "Pass the coordinates in \"x1\", \"y1\", \"x2\" and \"y2\""
+msgstr "Koordinaten in \"x1\", \"y1\", \"x2\" and \"y2\" übergeben"
+
+msgid "Shoot _area"
+msgstr "_Bereich"
+
+msgid "The shoot type"
+msgstr "Die Art des Bildschirmfotos"
+
+msgid "Wayland output name"
+msgstr "Name der Wayland-Ausgabe"
+
+msgid "The Wayland output name"
+msgstr "Der Name der Wayland-Ausgabe"
+
+msgid "Left x-coordinate"
+msgstr "Linke x-Koordinate"
+
+msgid "Top y-coordinate"
+msgstr "Obere y-Koordinate"
+
+msgid "Right x-coordinate"
+msgstr "Rechte x-Koordinate"
+
+msgid "Bottom y-coordinate"
+msgstr "Untere y-Koordinate"
+
+msgid "Include _mouse pointer"
+msgstr "_Mauszeiger einbeziehen"
+
+msgid "Your pointing device's cursor will be part of the image"
+msgstr "Der Mauszeiger wird mit abfotografiert"
+
+msgid "Screenshot dela_y"
+msgstr "Bildschirmfoto-_Verzögerung"
+
+msgid "Delay before taking the screenshot"
+msgstr "Verzögerung, bevor das Bildschirmfoto ausgelöst wird"
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "Screenshot"
+msgstr "Bildschirmfoto"
