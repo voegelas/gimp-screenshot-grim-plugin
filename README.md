@@ -3,7 +3,7 @@
 This [GIMP](https://www.gimp.org/) plug-in lets you select a region of a
 Wayland desktop and then creates an image from the selected region.
 
-The plug-in adds the menu item "Screenshot with grim" to the File > Create
+The plug-in adds the menu item "Screenshot with grim..." to the File > Create
 menu.
 
 ## DEPENDENCIES

@@ -14,6 +14,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "Screenshot"
+msgstr "Bildschirmfoto"
+
+msgid "S_nap"
+msgstr "A_uslösen"
+
 msgid "Missing Wayland output name"
 msgstr "Der Name der Wayland-Ausgabe fehlt"
 
@@ -26,8 +32,8 @@ msgstr "Unbekannte Art des Bildschirmfotos"
 msgid "Cannot load screenshot"
 msgstr "Kann Bildschirmfoto nicht laden"
 
-msgid "Screenshot with grim"
-msgstr "Bildschirmfoto mit grim"
+msgid "Screenshot with grim..."
+msgstr "Bildschirmfoto mit grim..."
 
 msgid "Create an image from a region of a Wayland desktop"
 msgstr "Fotografiert einen Bereich eines Wayland-Desktops"
@@ -49,7 +55,7 @@ msgid "The run mode"
 msgstr "Der Laufmodus"
 
 msgid "Select a region to capture"
-msgstr "Einen Bereich auswählen"
+msgstr "Einen Bereich interaktiv auswählen"
 
 msgid "Move selection with space bar held or cancel with Esc"
 msgstr "Auswahl bei gedrückter Leertaste verschieben oder mit Esc abbrechen"
@@ -61,7 +67,7 @@ msgid "Pass the output name in \"output\""
 msgstr "Ausgabename in \"output\" übergeben"
 
 msgid "Capture a region by coordinates"
-msgstr "Bereich mit Koordinaten auswählen"
+msgstr "Bereich anhand von Koordinaten auswählen"
 
 msgid "Pass the coordinates in \"x1\", \"y1\", \"x2\" and \"y2\""
 msgstr "Koordinaten in \"x1\", \"y1\", \"x2\" and \"y2\" übergeben"
@@ -72,20 +78,32 @@ msgstr "_Bereich"
 msgid "The shoot type"
 msgstr "Die Art des Bildschirmfotos"
 
-msgid "Wayland output name"
-msgstr "Name der Wayland-Ausgabe"
+msgid "Wayland _output"
+msgstr "Wayland-_Ausgabe"
 
-msgid "The Wayland output name"
-msgstr "Der Name der Wayland-Ausgabe"
+msgid "The name of the Wayland output to capture"
+msgstr "Der Name der zu fotografierenden Wayland-Ausgabe"
+
+msgid "_Left coordinate x1"
+msgstr "_Linke Koordinate x1"
 
 msgid "Left x-coordinate"
 msgstr "Linke x-Koordinate"
 
+msgid "_Top coordinate y1"
+msgstr "_Obere Koordinate y1"
+
 msgid "Top y-coordinate"
 msgstr "Obere y-Koordinate"
 
+msgid "_Right coordinate x2"
+msgstr "_Rechte Koordinate x2"
+
 msgid "Right x-coordinate"
 msgstr "Rechte x-Koordinate"
+
+msgid "_Bottom coordinate y2"
+msgstr "_Untere Koordinate y2"
 
 msgid "Bottom y-coordinate"
 msgstr "Untere y-Koordinate"
@@ -104,6 +122,3 @@ msgstr "Verzögerung, bevor das Bildschirmfoto ausgelöst wird"
 
 msgid "Image"
 msgstr "Bild"
-
-msgid "Screenshot"
-msgstr "Bildschirmfoto"

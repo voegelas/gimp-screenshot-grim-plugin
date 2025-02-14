@@ -22,6 +22,9 @@ import gi
 
 gi.require_version("Gimp", "3.0")
 from gi.repository import Gimp
+
+gi.require_version("GimpUi", "3.0")
+from gi.repository import GimpUi
 from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
@@ -38,8 +41,11 @@ localedir = os.path.join(plugindir, "locale")
 if not os.path.isdir(localedir):
     localedir = None
 
-t = gettext.translation("gimp-screenshot-grim-plugin", localedir)
-_ = t.gettext
+try:
+    t = gettext.translation("gimp-screenshot-grim-plugin", localedir)
+    _ = t.gettext
+except:
+    def _(message): return message
 
 
 def slurp():
@@ -92,16 +98,33 @@ def grim(
         raise OSError(errno.EINVAL, str(errs, errors="ignore"))
 
 
+def shoot_dialog(procedure, config):
+    names = [_.name for _ in procedure.get_arguments() if _.name != "run-mode"]
+    dialog = GimpUi.ProcedureDialog(
+        procedure=procedure, config=config, title=_("Screenshot")
+    )
+    dialog.set_ok_label(_("S_nap"))
+    dialog.fill(names)
+    ok = dialog.run()
+    dialog.destroy()
+    return ok
+
+
 def screenshot_run(procedure, config, data):
     run_mode = config.get_property("run-mode")
-    shoot_type = config.get_property("shoot-type")
 
     output = ""
     region = ""
 
     if run_mode == Gimp.RunMode.INTERACTIVE:
-        shoot_type = "region"
+        GimpUi.init("plug-in-screenshot-grim")
+        if not shoot_dialog(procedure, config):
+            return procedure.new_return_values(
+                Gimp.PDBStatusType.CANCEL,
+                GLib.Error(),
+            )
 
+    shoot_type = config.get_property("shoot-type")
     include_pointer = config.get_property("include-pointer")
     screenshot_delay = config.get_property("screenshot-delay")
 
@@ -203,7 +226,7 @@ class ScreenshotGrim(Gimp.PlugIn):
             screenshot_run,
             None,
         )
-        procedure.set_menu_label(_("Screenshot with grim"))
+        procedure.set_menu_label(_("Screenshot with grim..."))
         procedure.set_documentation(
             _("Create an image from a region of a Wayland desktop"),
             _(
@@ -252,14 +275,14 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_string_argument(
             "output",
-            _("Wayland output name"),
-            _("The Wayland output name"),
+            _("Wayland _output"),
+            _("The name of the Wayland output to capture"),
             "",
             GObject.ParamFlags.READWRITE,
         )
         procedure.add_int_argument(
             "x1",
-            "X1",
+            _("_Left coordinate x1"),
             _("Left x-coordinate"),
             GLib.MININT,
             GLib.MAXINT,
@@ -268,7 +291,7 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_int_argument(
             "y1",
-            "Y1",
+            _("_Top coordinate y1"),
             _("Top y-coordinate"),
             GLib.MININT,
             GLib.MAXINT,
@@ -277,7 +300,7 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_int_argument(
             "x2",
-            "X2",
+            _("_Right coordinate x2"),
             _("Right x-coordinate"),
             GLib.MININT,
             GLib.MAXINT,
@@ -286,7 +309,7 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_int_argument(
             "y2",
-            "Y2",
+            _("_Bottom coordinate y2"),
             _("Bottom y-coordinate"),
             GLib.MININT,
             GLib.MAXINT,
