@@ -45,9 +45,8 @@ try:
     t = gettext.translation("gimp-screenshot-grim-plugin", localedir)
     _ = t.gettext
 except:
-
-    def _(message):
-        return message
+    # fmt: off
+    def _(message): return message
 
 
 def slurp():
