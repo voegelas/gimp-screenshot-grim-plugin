@@ -77,7 +77,7 @@ def grim(
         args.append(region)
     if scale_factor is not None:
         args.append("-s")
-        args.append(scale_factor)
+        args.append(str(scale_factor))
     if type is not None:
         args.append("-t")
         args.append(type)
