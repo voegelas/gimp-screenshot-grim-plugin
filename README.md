@@ -11,9 +11,9 @@ and slurp.
 
 ## INSTALLATION
 
-Run the following commands to install the software:
+Run the following commands to install the plug-in:
 
-    mkdir ~/.config/GIMP/3.0/plug-ins
+    mkdir -p ~/.config/GIMP/3.0/plug-ins
     git clone https://github.com/voegelas/gimp-screenshot-grim-plugin.git \
         ~/.config/GIMP/3.0/plug-ins/screenshot-grim
 
