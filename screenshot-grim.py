@@ -129,6 +129,9 @@ def screenshot_run(procedure, config, data):
     include_pointer = config.get_property("include-pointer")
     screenshot_delay = config.get_property("screenshot-delay")
 
+    if screenshot_delay > 0:
+        time.sleep(screenshot_delay)
+
     if shoot_type == "region":
         try:
             region = slurp()
@@ -169,8 +172,6 @@ def screenshot_run(procedure, config, data):
     with tempfile.NamedTemporaryFile(
         mode="wb", delete_on_close=False, suffix=".ppm"
     ) as fp:
-        if screenshot_delay > 0:
-            time.sleep(screenshot_delay)
         try:
             grim(
                 fp,
