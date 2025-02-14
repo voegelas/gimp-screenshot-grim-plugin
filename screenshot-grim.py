@@ -232,8 +232,8 @@ class ScreenshotGrim(Gimp.PlugIn):
         procedure.set_documentation(
             _("Create an image from a region of a Wayland desktop"),
             _(
-                "This plug-in takes a screenshot of a desktop region. The command-line "
-                "utilities grim and slurp are required."
+                "This plug-in takes a screenshot of a desktop region. "
+                "The utilities grim and slurp are required."
             ),
             name,
         )
