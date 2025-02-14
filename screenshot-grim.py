@@ -45,7 +45,9 @@ try:
     t = gettext.translation("gimp-screenshot-grim-plugin", localedir)
     _ = t.gettext
 except:
-    def _(message): return message
+
+    def _(message):
+        return message
 
 
 def slurp():
@@ -230,9 +232,8 @@ class ScreenshotGrim(Gimp.PlugIn):
         procedure.set_documentation(
             _("Create an image from a region of a Wayland desktop"),
             _(
-                "This plug-in takes a screenshot of a user-selected desktop region. Entire "
-                "outputs and fixed rectangles can be captured in non-interactive mode. The "
-                "command-line utilities grim and slurp are required."
+                "This plug-in takes a screenshot of a desktop region. The command-line "
+                "utilities grim and slurp are required."
             ),
             name,
         )
@@ -251,7 +252,7 @@ class ScreenshotGrim(Gimp.PlugIn):
             "region",
             0,
             _("Select a region to capture"),
-            _("Move selection with space bar held or cancel with Esc"),
+            _("Move the selection with space bar held or cancel with Esc"),
         )
         shoot_type_choice.add(
             "output",
@@ -275,14 +276,14 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_string_argument(
             "output",
-            _("Wayland _output"),
+            _("_Wayland output"),
             _("The name of the Wayland output to capture"),
             "",
             GObject.ParamFlags.READWRITE,
         )
         procedure.add_int_argument(
             "x1",
-            _("_Left coordinate x1"),
+            _("Le_ft coordinate x1"),
             _("Left x-coordinate"),
             GLib.MININT,
             GLib.MAXINT,
@@ -300,7 +301,7 @@ class ScreenshotGrim(Gimp.PlugIn):
         )
         procedure.add_int_argument(
             "x2",
-            _("_Right coordinate x2"),
+            _("R_ight coordinate x2"),
             _("Right x-coordinate"),
             GLib.MININT,
             GLib.MAXINT,

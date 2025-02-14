@@ -39,14 +39,11 @@ msgid "Create an image from a region of a Wayland desktop"
 msgstr "Fotografiert einen Bereich eines Wayland-Desktops"
 
 msgid ""
-"This plug-in takes a screenshot of a user-selected desktop region. Entire "
-"outputs and fixed rectangles can be captured in non-interactive mode. The "
-"command-line utilities grim and slurp are required."
+"This plug-in takes a screenshot of a desktop region. The command-line "
+"utilities grim and slurp are required."
 msgstr ""
-"Dieses Plugin fotografiert einen von Ihnen ausgewählten Desktop-Bereich. "
-"Ganze Bildschirme und feste Ausschnitte können im nicht interaktiven "
-"Modus aufgenommen werden. Die Kommandozeilenprogramme grim und slurp müssen "
-"installiert sein."
+"Dieses Plugin fotografiert einen Desktop-Bereich. Die Kommandozeilenprogramme "
+"grim und slurp müssen installiert sein."
 
 msgid "Run mode"
 msgstr "Laufmodus"
@@ -55,22 +52,22 @@ msgid "The run mode"
 msgstr "Der Laufmodus"
 
 msgid "Select a region to capture"
-msgstr "Einen Bereich interaktiv auswählen"
+msgstr "Bereich interaktiv auswählen"
 
-msgid "Move selection with space bar held or cancel with Esc"
-msgstr "Auswahl bei gedrückter Leertaste verschieben oder mit Esc abbrechen"
+msgid "Move the selection with space bar held or cancel with Esc"
+msgstr "Die Auswahl bei gedrückter Leertaste verschieben oder mit Esc abbrechen"
 
 msgid "Capture an entire Wayland output"
-msgstr "Eine ganze Wayland-Ausgabe fotografieren"
+msgstr "Ganze Wayland-Ausgabe fotografieren"
 
 msgid "Pass the output name in \"output\""
-msgstr "Ausgabename in \"output\" übergeben"
+msgstr "Den Ausgabename in \"output\" übergeben"
 
 msgid "Capture a region by coordinates"
 msgstr "Bereich anhand von Koordinaten auswählen"
 
 msgid "Pass the coordinates in \"x1\", \"y1\", \"x2\" and \"y2\""
-msgstr "Koordinaten in \"x1\", \"y1\", \"x2\" and \"y2\" übergeben"
+msgstr "Die Koordinaten in \"x1\", \"y1\", \"x2\" and \"y2\" übergeben"
 
 msgid "Shoot _area"
 msgstr "_Bereich"
@@ -78,32 +75,32 @@ msgstr "_Bereich"
 msgid "The shoot type"
 msgstr "Die Art des Bildschirmfotos"
 
-msgid "Wayland _output"
-msgstr "Wayland-_Ausgabe"
+msgid "_Wayland output"
+msgstr "_Wayland-Ausgabe"
 
 msgid "The name of the Wayland output to capture"
 msgstr "Der Name der zu fotografierenden Wayland-Ausgabe"
 
-msgid "_Left coordinate x1"
+msgid "Le_ft coordinate x1"
 msgstr "_Linke Koordinate x1"
 
 msgid "Left x-coordinate"
 msgstr "Linke x-Koordinate"
 
 msgid "_Top coordinate y1"
-msgstr "_Obere Koordinate y1"
+msgstr "Obere Koordina_te y1"
 
 msgid "Top y-coordinate"
 msgstr "Obere y-Koordinate"
 
-msgid "_Right coordinate x2"
+msgid "R_ight coordinate x2"
 msgstr "_Rechte Koordinate x2"
 
 msgid "Right x-coordinate"
 msgstr "Rechte x-Koordinate"
 
 msgid "_Bottom coordinate y2"
-msgstr "_Untere Koordinate y2"
+msgstr "Unt_ere Koordinate y2"
 
 msgid "Bottom y-coordinate"
 msgstr "Untere y-Koordinate"
