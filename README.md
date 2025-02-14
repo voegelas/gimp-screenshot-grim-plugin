@@ -6,8 +6,8 @@ plug-in adds the menu item "Screenshot with grim..." to the File > Create menu.
 
 ## DEPENDENCIES
 
-This program requires GIMP 3.0, Python 3.7 and the command-line utilities grim
-and slurp.
+This program requires GIMP 3.0, Python 3.7, a Wayland compositor that supports
+the "wlr screencopy" protocol and the command-line utilities grim and slurp.
 
 ## INSTALLATION
 
