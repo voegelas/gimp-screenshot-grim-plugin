@@ -22,12 +22,12 @@ import gi
 
 gi.require_version("Gimp", "3.0")
 from gi.repository import Gimp
-
-gi.require_version("GimpUi", "3.0")
-from gi.repository import GimpUi
 from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
+
+gi.require_version("GimpUi", "3.0")
+from gi.repository import GimpUi
 
 import errno, subprocess, sys, tempfile, time
 
