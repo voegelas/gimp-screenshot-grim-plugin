@@ -53,7 +53,9 @@ def slurp():
     args = ["slurp", "-d"]
     proc = subprocess.run(args, capture_output=True, text=True)
     if proc.returncode != 0:
-        raise OSError(errno.EINVAL, proc.stderr)
+        errmsg = proc.stderr
+        if not "selection cancelled" in errmsg:
+            raise OSError(errno.EINVAL, errmsg)
     return proc.stdout.rstrip()
 
 
@@ -96,7 +98,8 @@ def grim(
         proc.kill()
         _, errs = proc.communicate()
     if proc.returncode != 0:
-        raise OSError(errno.EINVAL, str(errs, errors="ignore"))
+        errmsg = str(errs, errors="ignore")
+        raise OSError(errno.EINVAL, errmsg)
 
 
 def shoot_dialog(procedure, config):
