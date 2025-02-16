@@ -11,3 +11,7 @@ Grab the latest version using the commands:
 
 You can submit code changes by forking the repository, pushing your code
 changes to your clone, and then submitting a pull request.
+
+In order to update the locale message catalogs, install gettext and run:
+
+    make locales
