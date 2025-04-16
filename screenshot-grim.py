@@ -247,7 +247,7 @@ class ScreenshotGrim(Gimp.PlugIn):
             _("Run mode"),
             _("The run mode"),
             Gimp.RunMode,
-            Gimp.RunMode.NONINTERACTIVE,
+            Gimp.RunMode.INTERACTIVE,
             GObject.ParamFlags.READWRITE,
         )
         shoot_type_choice = Gimp.Choice.new()

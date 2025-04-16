@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] - 2025-04-16
+
+### Fixed
+
+- Set the run mode to interactive
+
 ## [1.0.2] - 2025-02-16
 
 ### Fixed
